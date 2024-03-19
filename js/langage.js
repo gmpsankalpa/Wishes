@@ -20,8 +20,18 @@ function translateMessage() {
         "සුභ නව වසරක්! මෙන්න ඔබ සඳහා පමණක් සැඟවුණු පණිවිඩයක්!"
     ];
 
+    const greetingsTA = [
+        "உங்களுக்கும் உங்கள் குடும்பத்தினருக்கும் மகிழ்ச்சியான மற்றும் வளமான சிங்கள இந்து புத்தாண்டு வாழ்த்துக்கள்!",
+        "இந்தப் புத்தாண்டு உங்களுக்கு நல்ல ஆரோக்கியத்தையும், மகிழ்ச்சியையும், வெற்றியையும் தரட்டும்.",
+        "விழாக்களைக் கண்டு மகிழுங்கள், மரபுகளைப் போற்றுங்கள்.",
+        "அன்பான வாழ்த்துக்கள்,",
+        "மலித பியுமால் சங்கல்ப",
+        "புத்தாண்டு வாழ்த்துக்கள்! உங்களுக்கான மறைக்கப்பட்ட செய்தி இதோ!"
+    ];
+
     const h1EN = "Sinhala & Hindu New Year Greetings";
     const h1SI = "සිංහල හින්දු අලුත් අවුරුදු සුභ පැතුම්";
+    const h1TA = "சிங்கள மற்றும் இந்து புத்தாண்டு வாழ்த்துக்கள்";
 
     const messageElements = document.querySelectorAll('.message p');
     const h1Element = document.querySelector('.message h1');
@@ -31,10 +41,16 @@ function translateMessage() {
         messageElements.forEach((element, index) => {
             element.textContent = greetingsSI[index];
         });
+    } else if (selectedLanguage === 'ta') {
+        h1Element.textContent = h1TA;
+        messageElements.forEach((element, index) => {
+            element.textContent = greetingsTA[index];
+        });
     } else {
         h1Element.textContent = h1EN;
         messageElements.forEach((element, index) => {
             element.textContent = greetingsEN[index];
         });
     }
+    
 }
