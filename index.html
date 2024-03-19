@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Year Greetings</title>
     <link rel="stylesheet" href="/css/styles.css">
-    <link rel="shortcut icon" href="/src/logo.gif" type="image/x-icon">
+    <link rel="shortcut icon" href="/src/img/logo.gif" type="image/x-icon">
 </head>
 
 <body>
     <div class="background">
+        <!-- select language: -->
         <select id="languageSelect" onchange="translateMessage()">
             <option value="en">English</option>
             <option value="si">Sinhala</option>
@@ -33,9 +34,16 @@
             </div>
         </div>
     </div>
+
+    <audio autoplay loop>
+        <source src="/src/audio/Ceylon.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.0/dist/confetti.browser.min.js"></script>
     <script src="/js/script.js"></script>
     <script src="/js/langage.js"></script>
+    <script src="/js/audio.js"></script>
 </body>
 
 </html>
