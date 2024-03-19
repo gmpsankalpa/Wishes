@@ -1,29 +1,36 @@
 body {
     font-family: Arial, sans-serif;
-    background-image: url('/src/1111111111.jpg'); /* Path to your image */
-    background-size: cover; /* Cover the entire background */
-    background-repeat: no-repeat; /* Do not repeat the background */
+    background-image: url('/src/1111111111.jpg');
+    /* Path to your image */
+    background-size: cover;
+    /* Cover the entire background */
+    background-repeat: no-repeat;
+    /* Do not repeat the background */
     background-position: center;
     margin: 0;
     padding: 0;
 }
 
 .container {
-    max-width: 90%; /* Adjusted max-width for better mobile responsiveness */
+    max-width: 90%;
+    /* Adjusted max-width for better mobile responsiveness */
     margin: 50px auto;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for container */
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Semi-transparent white background for container */
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 .message {
     text-align: center;
-    color: #fff; /* White text color */
+    color: #fff;
+    /* White text color */
 }
 
 h1 {
-    color: #dc3545; /* Merun red */
+    color: #dc3545;
+    /* Merun red */
 }
 
 p {
@@ -31,21 +38,22 @@ p {
     line-height: 1.5;
 }
 
-#p1{
+#p1 {
     color: red;
     font-weight: bolder;
     /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
     /* font-size: 20px; */
 }
 
-#p2{
+#p2 {
     color: darkolivegreen;
     font-weight: bolder;
 }
 
 button {
     padding: 10px 20px;
-    background-color: #28a745; /* Green */
+    background-color: #28a745;
+    /* Green */
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -54,13 +62,15 @@ button {
 }
 
 button:hover {
-    background-color: #218838; /* Darker green */
+    background-color: #218838;
+    /* Darker green */
 }
 
 #hiddenMessage {
     margin-top: 20px;
     padding: 15px;
-    background-color: #007bff; /* Blue */
+    background-color: #007bff;
+    /* Blue */
     color: #fff;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -73,6 +83,7 @@ button:hover {
         opacity: 0;
         transform: translateY(-20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -86,14 +97,31 @@ button:hover {
     }
 
     h1 {
-        font-size: 24px; /* Decrease font size for smaller screens */
+        font-size: 24px;
+        /* Decrease font size for smaller screens */
     }
 
     p {
-        font-size: 16px; /* Decrease font size for smaller screens */
+        font-size: 16px;
+        /* Decrease font size for smaller screens */
     }
 
     button {
-        font-size: 14px; /* Decrease font size for smaller screens */
+        font-size: 14px;
+        /* Decrease font size for smaller screens */
     }
+}
+
+#languageSelect {
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Style select options */
+#languageSelect option {
+    font-size: 16px;
+    background-color: #fff;
 }
