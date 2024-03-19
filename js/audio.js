@@ -1,26 +1,11 @@
-var audio = document.getElementById("autoplay loop");
+let myAudio = new Audio('https://song.sgp1.digitaloceanspaces.com/song/478/10304.mp3'); // Create an Audio object with the file 'Ceylon.mp3'
 
-// Check if there's a playback state stored in local storage
-var playbackState = localStorage.getItem("audioPlaybackState");
+window.onload = function() {
+    setInterval(GameLoop, 1000 / 10); // Start the game loop when the window is loaded
+};
 
-// If there's a playback state, resume playback
-if (playbackState === "playing") {
-    audio.play();
+function GameLoop() {
+    if (myAudio.paused) { // Check if the audio is paused
+        myAudio.play(); // If paused, play the audio
+    }
 }
-
-// Add event listener for when audio playback starts or pauses
-audio.addEventListener("play", function() {
-    // Store the playback state as "playing" when audio starts playing
-    localStorage.setItem("audioPlaybackState", "playing");
-});
-
-audio.addEventListener("pause", function() {
-    // Store the playback state as "paused" when audio is paused
-    localStorage.setItem("audioPlaybackState", "paused");
-});
-
-// Additionally, you might want to handle cases where the user manually stops the audio
-audio.addEventListener("ended", function() {
-    // Clear the playback state when audio playback ends
-    localStorage.removeItem("audioPlaybackState");
-});
