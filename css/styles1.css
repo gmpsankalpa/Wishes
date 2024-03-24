@@ -1,0 +1,177 @@
+/* Body styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('https://i.ibb.co/72TTktj/wp8940052-sinhala-and-tamil-new-year-wallpapers.png');
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  
+  /* Container styles */
+  .container {
+    /* max-width: 90%; */
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    padding: 0 20px; /* Add some padding to the sides for better spacing */
+    position: relative; /* Make container relative for absolute positioning */
+  }
+  
+  /* Background styles */
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  
+  .shape1,
+  .shape2,
+  .shape3 {
+    position: absolute;
+    border-radius: 50%;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+  
+  .shape1 {
+    width: 200px;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.2);
+    animation-name: move1;
+  }
+  
+  .shape2 {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.3);
+    animation-name: move2;
+  }
+  
+  .shape3 {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.4);
+    animation-name: move3;
+  }
+  
+  @keyframes move1 {
+    0% {
+      top: -100px;
+      left: -100px;
+    }
+    50% {
+      top: calc(100vh + 100px);
+      left: calc(100vw + 100px);
+    }
+    100% {
+      top: -100px;
+      left: -100px;
+    }
+  }
+  
+  @keyframes move2 {
+    0% {
+      top: calc(100vh + 100px);
+      left: calc(100vw + 100px);
+    }
+    50% {
+      top: -50px;
+      left: -50px;
+    }
+    100% {
+      top: calc(100vh + 100px);
+      left: calc(100vw + 100px);
+    }
+  }
+  
+  @keyframes move3 {
+    0% {
+      top: -50px;
+      left: calc(100vw + 50px);
+    }
+    50% {
+      top: calc(100vh + 50px);
+      left: -50px;
+    }
+    100% {
+      top: -50px;
+      left: calc(100vw + 50px);
+    }
+  }
+  
+  /* Button styles */
+  #redirectButton {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    outline: none;
+  }
+  
+  #redirectButton:hover {
+    background-color: #45a049;
+  }
+  
+  /* Envelope styles */
+  #envelope {
+    width: 200px;
+    height: 120px;
+    background-color: #ffffff;
+    border: 2px solid #dddddd;
+    border-radius: 10px;
+    position: relative;
+    margin: 40px auto;
+    text-align: center;
+    
+  }
+  
+  #envelope:before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20px 12px 0;
+    border-color: #dddddd transparent transparent;
+    transform: translateX(-50%);
+  }
+  
+  /* Animation styles */
+  @keyframes openEnvelope {
+    0% {
+      transform: translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-10px) rotate(5deg);
+    }
+    100% {
+      transform: translateY(-20px) rotate(10deg);
+    }
+  }
+  
+  .openAnimation {
+    animation: openEnvelope 0.5s ease-in-out;
+  }
+  
+  /* Responsive styles */
+@media screen and (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+  }

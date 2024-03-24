@@ -1,52 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Year Greetings</title>
-    <link rel="stylesheet" href="./css/styles.css">
-    <link rel="shortcut icon" href="./src/img/logo.gif" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Redirect Button with Animation</title>
+<link rel="stylesheet" type="text/css" href="./css/styles1.css">
 </head>
-
 <body>
+
+<div class="container">
     <div class="background">
-        <!-- select language: -->
-        <select id="languageSelect" onchange="translateMessage()">
-            <option value="en">English</option>
-            <option value="si">Sinhala</option>
-            <option value="ta">Tamil</option>
-        </select>
+        <div class="shape1"></div>
+        <div class="shape2"></div>
+        <div class="shape3"></div>
+      </div>
+  <div id="envelope">
+    <div class="envelope-cover"></div>
+    <div class="envelope-body">
+    <button id="redirectButton">Open Message</button>
     </div>
-    <div class="container">
-        <div class="message">
-            <h1>Sinhala & Hindu New Year Greetings</h1>
-            <img src="https://media.tenor.com/hHKjXDtJKQUAAAAj/srilanka-discord-srilankan-discord.gif" alt="sl image">
-            <p id="p1">Wishing you and your family a joyous and prosperous Sinhala Hindu New Year!</p>
-            <p id="p1">May this New Year bring you good health, happiness, and success.</p>
-            <p id="p1">Enjoy the festivities and cherish the traditions.</p>
-            <p id="p2">Warm regards,</p>
-            <p id="p2">Malitha Piyumal Sankalpa</p>
-            <button id="toggleButton" onclick="showConfetti()">Click me</button>
-            <div id="hiddenMessage" style="display: none;">
-                <p id="p3">Happy New Year! Here's a hidden message just for you!</p>
-                <!-- <img src="/src/img/newyear.gif" alt="animation image" class="hidden-image"> -->
-                <!-- <img src="https://media.tenor.com/LC_PPvzYTagAAAAM/olendra-studio-design.gif" alt="image" class="hidden-image"> -->
-                <!-- <img src="https://media.tenor.com/images/23575af743d33346e7f9636820ce6072/tenor.gif" alt="image"> -->
-                <img src="./src/img/video2.gif" alt="image">
-            </div>
-        </div>
-    </div>
+  </div>
+</div>
 
-    <!-- <audio autoplay loop>
-        <source src="https://song.sgp1.digitaloceanspaces.com/song/478/10304.mp3" type="audio/mpeg">
-    </audio> -->
+<script src="./js/script1.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.0/dist/confetti.browser.min.js"></script>
-    <script src="./js/script.js"></script>
-    <script src="./js/langage.js"></script>
-    <script src="./js/audio.js"></script>
-    <!-- <script src="/js/gif.js"></script> -->
 </body>
-
 </html>
