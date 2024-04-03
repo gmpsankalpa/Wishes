@@ -1,9 +1,4 @@
-body {
-    margin: 0;
-    height: 100vh;
-    overflow: hidden;
-  }
-  
+
   @keyframes firework {
     0% { transform: translate(var(--x), var(--initialY)); width: var(--initialSize); opacity: 1; }
     50% { width: 1vmin; opacity: 1; }
