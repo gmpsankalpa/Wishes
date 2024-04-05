@@ -7,7 +7,7 @@ function translateMessage() {
         "May this New Year bring you good health, happiness, and success.",
         "Enjoy the festivities and cherish the traditions.",
         "Warm regards,",
-        "Malitha Piyumal Sankalpa",
+        "G.M.P.Sankalpa",
         "Happy New Year! Here's a hidden message just for you!"
     ];
 
@@ -16,7 +16,7 @@ function translateMessage() {
         "මේ අලුත් අවුරුද්දේ ඔබට නිදුක් නිරෝගී, සතුට, සාර්ථකත්වය උදා වේවා.",
         "උත්සව භුක්ති විඳින්න සහ සම්ප්රදායන් අගය කරන්න.",
         "උණුසුම් සුභාශිංෂන,",
-        "මලිත පියුමාල් සංකල්ප",
+        "ජී.එම්.පි.සංකල්ප",
         "සුභ නව වසරක්! මෙන්න ඔබ සඳහා පමණක් සැඟවුණු පණිවිඩයක්!"
     ];
 
@@ -25,32 +25,34 @@ function translateMessage() {
         "இந்தப் புத்தாண்டு உங்களுக்கு நல்ல ஆரோக்கியத்தையும், மகிழ்ச்சியையும், வெற்றியையும் தரட்டும்.",
         "விழாக்களைக் கண்டு மகிழுங்கள், மரபுகளைப் போற்றுங்கள்.",
         "அன்பான வாழ்த்துக்கள்,",
-        "மலித பியுமால் சங்கல்ப",
+        "ஜி.எம்.பி.சங்கல்ப",
         "புத்தாண்டு வாழ்த்துக்கள்! உங்களுக்கான மறைக்கப்பட்ட செய்தி இதோ!"
     ];
 
-    const h1EN = "Sinhala & Hindu New Year Greetings";
-    const h1SI = "සිංහල හින්දු අලුත් අවුරුදු සුභ පැතුම්";
-    const h1TA = "சிங்கள மற்றும் இந்து புத்தாண்டு வாழ்த்துக்கள்";
+    const h1EN = "Sinhala & Hindu New Year Greetings!";
+    const h1SI = "සිංහල හින්දු අලුත් අවුරුදු සුභ පැතුම්!";
+    const h1TA = "சிங்கள மற்றும் இந்து புத்தாண்டு வாழ்த்துக்கள்!";
 
     const messageElements = document.querySelectorAll('.message p');
     const h1Element = document.querySelector('.message h1');
 
+    // Apply the animation to h1 text
+    h1Element.innerHTML = `<span>${h1Element.textContent}</span>`;
+
     if (selectedLanguage === 'si') {
-        h1Element.textContent = h1SI;
+        h1Element.innerHTML = `<span>${h1SI}</span>`;
         messageElements.forEach((element, index) => {
             element.textContent = greetingsSI[index];
         });
     } else if (selectedLanguage === 'ta') {
-        h1Element.textContent = h1TA;
+        h1Element.innerHTML = `<span>${h1TA}</span>`;
         messageElements.forEach((element, index) => {
             element.textContent = greetingsTA[index];
         });
     } else {
-        h1Element.textContent = h1EN;
+        h1Element.innerHTML = `<span>${h1EN}</span>`;
         messageElements.forEach((element, index) => {
             element.textContent = greetingsEN[index];
         });
     }
-    
 }
