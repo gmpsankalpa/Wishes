@@ -35,24 +35,31 @@ function translateMessage() {
 
     const messageElements = document.querySelectorAll('.message p');
     const h1Element = document.querySelector('.message h1');
+    const signatureElement = document.querySelector('.wave-p3');
 
     // Apply the animation to h1 text
     h1Element.innerHTML = `<span>${h1Element.textContent}</span>`;
+
+    // Apply the animation to signature text
+    signatureElement.innerHTML = `<p><span>${signatureElement.textContent}</span></p>`;
 
     if (selectedLanguage === 'si') {
         h1Element.innerHTML = `<span>${h1SI}</span>`;
         messageElements.forEach((element, index) => {
             element.textContent = greetingsSI[index];
         });
+        signatureElement.innerHTML = `<p><span>ජී.එම්.පි.සංකල්ප</span></p>`;
     } else if (selectedLanguage === 'ta') {
         h1Element.innerHTML = `<span>${h1TA}</span>`;
         messageElements.forEach((element, index) => {
             element.textContent = greetingsTA[index];
         });
+        signatureElement.innerHTML = `<p><span>ஜி.எம்.பி.சங்கல்ப</span></p>`;
     } else {
         h1Element.innerHTML = `<span>${h1EN}</span>`;
         messageElements.forEach((element, index) => {
             element.textContent = greetingsEN[index];
         });
+        signatureElement.innerHTML = `<p><span>G.M.P.Sankalpa</span></p>`;
     }
 }

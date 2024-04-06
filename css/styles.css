@@ -29,6 +29,7 @@ body {
 }
 
 .wave-text {
+    font-family: 'Noto Sans Sinhala', sans-serif;
     font-size: 18px;
     font-weight: bold;
     position: relative;
@@ -57,11 +58,13 @@ body {
   
 
 p {
+    font-family: 'Noto Sans Sinhala', sans-serif;
     margin-bottom: 15px;
     line-height: 1.5;
 }
 
 #p1 {
+    font-family: 'Noto Sans Sinhala', sans-serif;
     font-size: 18px;
     font-weight: bold;
     color: red;
@@ -71,18 +74,20 @@ p {
 }
 
 #p2 {
+    font-family: 'Noto Sans Sinhala', sans-serif;
     font-size: 18px;
     font-weight: bold;
     color: darkolivegreen;
 }
 
-/* #p3 {
+#p3 {
+    font-family: 'Noto Sans Sinhala', sans-serif;
     font-size: 18px;
     font-weight: bold;
     color: rgb(26, 25, 25);
     font-weight: bolder;
     text-shadow: #218838;
-} */
+}
 
 .wave-p3 {
     font-size: 18px;
