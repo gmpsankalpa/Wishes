@@ -33,7 +33,9 @@
             <p id="p1">May this New Year bring you good health, happiness, and success.</p>
             <p id="p1">Enjoy the festivities and cherish the traditions.</p>
             <p id="p2">Warm regards,</p>
-            <p id="p3">G.M.P.Sankalpa</p>
+            <div class="wave-p3">
+                <p id="p3"><span>G.M.P.Sankalpa</span></p>
+            </div>
             <button id="toggleButton" onclick="showConfetti()">Click me</button>
             <div id="hiddenMessage" style="display: none;">
                 <p id="p4">Happy New Year! Here's a hidden message just for you!</p>
@@ -45,6 +47,8 @@
         </div>
     </div>
 
+    
+
     <!-- <div>
         <div class="firework"></div>
         <div class="firework"></div>
@@ -55,6 +59,17 @@
         <source src="https://song.sgp1.digitaloceanspaces.com/song/478/10304.mp3" type="audio/mpeg">
     </audio> -->
 
+    <br><br><br><br><br>
+
+    <footer>
+        <div class="footer">
+          Copyright &copy; <a id="copyright-year"></a> • <a href="https://gmpsankalpa.xyz/">GMP Sanklpa</a>. All rights reserved. 
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('#copyright-year').innerText = new Date().getFullYear();
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.0/dist/confetti.browser.min.js"></script>
     <script src="./js/script.js"></script>
     <script src="./js/langage.js"></script>

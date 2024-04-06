@@ -74,16 +74,39 @@ p {
     font-size: 18px;
     font-weight: bold;
     color: darkolivegreen;
-    font-weight: bolder;
 }
 
-#p3 {
+/* #p3 {
     font-size: 18px;
     font-weight: bold;
     color: rgb(26, 25, 25);
     font-weight: bolder;
     text-shadow: #218838;
-}
+} */
+
+.wave-p3 {
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+  }
+  
+  .wave-p3 span {
+    background-image: linear-gradient(to right, red, green, Blue);
+    background-size: 200% auto;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: wave 4s linear infinite; /* Adjusted duration for synchronization */
+  }
+  
+  @keyframes wave {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
 
 button {
     padding: 10px 20px;
@@ -173,3 +196,25 @@ button:hover {
     justify-content: center;
     text-align: center;
 } */
+
+.footer { 
+    background-color: #242424; 
+    color: white; 
+    padding: 10px;
+    font-size: 14px;
+    text-align:center;
+    white-space: nowrap;
+    position:relative;
+  }
+  
+  /* Footer link style */
+  .footer a { 
+   color: white;
+   text-decoration: none;
+  }
+  
+  /*/ Footer link hover style / */
+  .footer a:hover { 
+   color: #f0f0f0;
+   text-decoration: underline;
+  }
