@@ -77,22 +77,25 @@ p {
     font-family: 'Noto Sans Sinhala', sans-serif;
     font-size: 18px;
     font-weight: bold;
-    color: darkolivegreen;
+    color: #000000;
 }
 
-#p3 {
+
+/* #p3 {
     font-family: 'Noto Sans Sinhala', sans-serif;
     font-size: 18px;
     font-weight: bold;
     color: rgb(26, 25, 25);
     font-weight: bolder;
     text-shadow: #218838;
-}
+} */
 
 .wave-p3 {
-    font-size: 18px;
+    font-size: 19px;
     font-weight: bold;
     position: relative;
+    font-weight: bolder;
+    text-decoration: underline;
   }
   
   .wave-p3 span {
