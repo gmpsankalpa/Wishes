@@ -15,6 +15,7 @@
   p {
     color: white;
     font-family: 'Noto Sans Sinhala', sans-serif;
+    font-weight: bolder;
   }
 
   .alert-content {
