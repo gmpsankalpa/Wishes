@@ -14,6 +14,17 @@
 </head>
 <body>
 
+<!-- Alert Message -->
+<div class="alert" id="custom-alert">
+  <div class="alert-content">
+    <span class="close-btn" onclick="closeAlert()">&times;</span>
+    <p>🎶Before you proceed, we recommend turning up your device's volume to fully immerse yourself in the enhanced audio experiences we have to offer!</p>
+    <p>🎶ඔබ ඉදිරියට යාමට පෙර, අප විසින් පිරිනමනු ලබන වැඩිදියුණු කළ ශ්‍රව්‍ය අත්දැකීම්වල සම්පූර්ණයෙන්ම ගිල්වීමට ඔබගේ උපාංගයේ ශබ්දය වැඩි කිරීමට අපි නිර්දේශ කරමු!</p>
+    <button id="bt" onclick="closeAlert()">OK</button>
+  </div>
+</div>
+<!-- End of Alert Message -->
+
 <div class="container">
     <div class="background">
         <div class="shape1"></div>
@@ -27,17 +38,6 @@
     </div>
   </div>
 </div>
-
-<!-- Alert Message -->
-<div class="alert" id="custom-alert">
-  <div class="alert-content">
-    <span class="close-btn" onclick="closeAlert()">&times;</span>
-    <p>🎶Before you proceed, we recommend turning up your device's volume to fully immerse yourself in the enhanced audio experiences we have to offer!</p>
-    <p>🎶ඔබ ඉදිරියට යාමට පෙර, අප විසින් පිරිනමනු ලබන වැඩිදියුණු කළ ශ්‍රව්‍ය අත්දැකීම්වල සම්පූර්ණයෙන්ම ගිල්වීමට ඔබගේ උපාංගයේ ශබ්දය වැඩි කිරීමට අපි නිර්දේශ කරමු!</p>
-    <button id="bt" onclick="closeAlert()">OK</button>
-  </div>
-</div>
-<!-- End of Alert Message -->
 
 <div class="loading-overlay" id="loadingOverlay">
   <div class="loader"></div>
@@ -92,28 +92,30 @@
 <script src="./js/audio1.js"></script>
 
 <script>
-  let myAudio = new Audio('https://song.sgp1.digitaloceanspaces.com/song/645/6792.mp3'); // Create an Audio object with the file 'Ceylon.mp3'
+  let myAudio = new Audio('https://song.sgp1.digitaloceanspaces.com/song/645/6792.mp3');
 
+  
   window.onload = function() {
-      showAlert(); // Show the alert when the window is loaded
-  };
-  
-  function showAlert() {
-      var alertBox = document.getElementById("custom-alert");
-      alertBox.style.display = "block";
-  
-      setTimeout(function() {
-          alertBox.style.display = "none"; // Hide the alert after a certain duration (e.g., 3 seconds)
-          playAudio(); // Call the function to play the audio after the alert is closed
-      }, 3000); // Change this value to adjust the duration of the alert (in milliseconds)
+    showAlert(); // Call showAlert() when the window is loaded
+    setInterval(GameLoop, 1000 / 10);
+};
+
+function showAlert() {
+    var alertBox = document.getElementById("custom-alert");
+    alertBox.style.display = "block"; // Display the alert
+}
+
+function closeAlert() {
+    var alertBox = document.getElementById("custom-alert");
+    alertBox.style.display = "none"; // Hide the alert
+}
+
+function GameLoop() {
+  if (myAudio.paused) { // Check if the audio is paused
+      myAudio.play(); // If paused, play the audio
   }
-  
-  function playAudio() {
-      if (myAudio.paused) { // Check if the audio is paused
-          myAudio.play(); // If paused, play the audio
-      }
-  }
-  
+}
+
 </script>
 </body>
 </html>
