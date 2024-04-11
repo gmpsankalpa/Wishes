@@ -141,6 +141,7 @@ body {
   
   /* Button styles */
   #redirectButton {
+    font-family: 'Noto Sans Sinhala', sans-serif;
     padding: 15px 30px;
     font-size: 18px;
     background-color: #4CAF50;
