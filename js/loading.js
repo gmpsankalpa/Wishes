@@ -9,10 +9,10 @@ window.addEventListener('load', function() {
   loader.style.display = 'none';
 });
 
-window.addEventListener('load', function() {
-  var loader = document.getElementById('loadingOverlay1');
-  loader.style.display = 'none';
-});
+// window.addEventListener('load', function() {
+//   var loader = document.getElementById('loadingOverlay1');
+//   loader.style.display = 'none';
+// });
 
 // List of image paths
 const imagePaths = [
