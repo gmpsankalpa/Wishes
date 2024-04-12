@@ -9,9 +9,20 @@ window.addEventListener('load', function() {
   loader.style.display = 'none';
 });
 
-window.addEventListener('load', function() {
+// window.addEventListener('load', function() {
+//   var loader = document.getElementById('loadingOverlay1');
+//   loader.style.display = 'none';
+// });
+
+function hideLoadingOverlay() {
   var loader = document.getElementById('loadingOverlay1');
   loader.style.display = 'none';
+}
+
+// Listens for the load event
+window.addEventListener('load', function() {
+  // Hides the loading overlay after 5 seconds
+  setTimeout(hideLoadingOverlay, 5000);
 });
 
 // List of image paths
@@ -34,7 +45,7 @@ function changeLoadingImage() {
   setInterval(() => {
     currentIndex = (currentIndex + 1) % imagePaths.length;
     loadingImage.src = imagePaths[currentIndex];
-  }, 1500); // Change image every 1 second (adjust as needed)
+  }, 1000); // Change image every 1 second (adjust as needed)
 }
 
 document.addEventListener('DOMContentLoaded', changeLoadingImage);
