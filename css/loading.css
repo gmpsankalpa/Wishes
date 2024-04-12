@@ -11,7 +11,7 @@
   scrollbar-color: var(--smoky-black) hsla(0, 0%, 100%, 0.1); */
 /* overflow-y: scroll; */
 /* } */
-
+/* 
 .loader-container {
   position: fixed;
   top: 0;
@@ -22,8 +22,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(39, 38, 38);/* Semi-transparent overlay */
-  z-index: 9999;/* Ensure the loader appears above other content */
+  background-color: rgb(39, 38, 38);
+  z-index: 9999;
 }
 
 .loader {
@@ -33,7 +33,6 @@
   width: 60px;
   height: 60px;
   animation: spin 2s linear infinite;
-  /* margin-bottom: 1px; */
 }
 
 h3 {
@@ -50,11 +49,11 @@ h3 {
   100% {
     transform: rotate(360deg);
   }
-}
+} */
 
 
   /* HTML: <div class="loader"></div> */
-  /* .loading-overlay {
+  .loading-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -80,7 +79,7 @@ h3 {
     100% {
         background-size: 100%;
     }
-} */
+}
 
 .loading-overlay1 {
   position: fixed;
