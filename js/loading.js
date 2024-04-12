@@ -1,10 +1,5 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // Show loader when the DOM content starts loading
-    document.querySelector(".loader").style.display = "block";
-  });
-  
-  window.addEventListener("load", function() {
-    // Hide loader when the entire page finishes loading
-    document.querySelector(".loader").style.display = "none";
-  });
-  
+// Hide the loader when the page is fully loaded
+window.addEventListener('load', function() {
+  var loader = document.getElementById('loader');
+  loader.style.display = 'none';
+});

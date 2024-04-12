@@ -1,35 +1,83 @@
-/* HTML: <div class="loader"></div> */
+/* body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: #f0f0f0;
+  position: relative;
+} */
+
+/* .content { */
+/* scrollbar-width: thin;
+  scrollbar-color: var(--smoky-black) hsla(0, 0%, 100%, 0.1); */
+/* overflow-y: scroll; */
+/* } */
+
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(39, 38, 38);/* Semi-transparent overlay */
+  z-index: 9999;/* Ensure the loader appears above other content */
+}
+
 .loader {
-    width: 40px;
-    aspect-ratio: 1;
-    position: relative;
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #3498db;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 2s linear infinite;
+  /* margin-bottom: 1px; */
+}
+
+h3 {
+  font-family: 'Noto Sans Sinhala', sans-serif;
+  font-size: 1.2em;
+  color: white;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
   }
-  .loader:before,
-  .loader:after {
-    content: "";
-    position: absolute;
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+  /* HTML: <div class="loader"></div> */
+  /* .loading-overlay {
+    position: fixed;
     top: 0;
     left: 0;
-    margin: -8px 0 0 -8px;
-    width: 16px;
-    aspect-ratio: 1;
-    background: #3FB8AF;
-    animation:
-      l2-1 2s  infinite,
-      l2-2 1s infinite ;
-  }
-  .loader:after {
-    background:#FF3D7F;
-    animation-delay: -1s,0s;
-  }
-  @keyframes l2-1 {
-    0%   {top:0   ;left:0}
-    25%  {top:100%;left:0}
-    50%  {top:100%;left:100%}
-    75%  {top:0   ;left:100%}
-    100% {top:0   ;left:0}
-  }
-  @keyframes l2-2 {
-     40%,50% {transform: rotate(0.25turn) scale(0.5)}
-     100%    {transform: rotate(0.5turn) scale(1)}
-  }
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    width: 120px;
+    height: 20px;
+    border-radius: 20px;
+    background:
+        repeating-linear-gradient(135deg, #f03355 0 10px, #ffa516 0 20px) 0/0% no-repeat,
+        repeating-linear-gradient(135deg, #ddd 0 10px, #eee 0 20px) 0/100%;
+    animation: l3 2s infinite;
+}
+
+@keyframes l3 {
+    100% {
+        background-size: 100%;
+    }
+} */

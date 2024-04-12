@@ -11,6 +11,7 @@
 <title></title>
 <link rel="stylesheet" type="text/css" href="./css/styles1.css">
 <link rel="stylesheet" href="./css/alert.css">
+<link rel="stylesheet" href="./css/loading.css">
 <link rel="shortcut icon" href="./src/img/logo.gif" type="image/x-icon">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@400;700&display=swap" rel="stylesheet">
 <!-- <script>
@@ -18,6 +19,11 @@
 </script> -->
 </head>
 <body>
+
+  <div class="loader-container" id="loader">
+    <div class="loader"></div>
+    <h3>Loading...</h3>
+  </div>
 
 <!-- Alert Message -->
 <div class="alert" id="custom-alert">
@@ -42,10 +48,6 @@
     <button id="redirectButton">Open Message!</button>
     </div>
   </div>
-</div>
-
-<div class="loading-overlay" id="loadingOverlay">
-  <div class="loader"></div>
 </div>
 
 <footer>
@@ -95,6 +97,7 @@
 <script src="./js/script1.js"></script>
 <script src="./js/butoon.js"></script>
 <script src="./js/audio1.js"></script>
+<script src="./js/loading.js"></script>
 
 <script>
   let myAudio = new Audio('https://song.sgp1.digitaloceanspaces.com/song/645/6792.mp3');
