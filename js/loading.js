@@ -9,10 +9,10 @@ window.addEventListener('load', function() {
   loader.style.display = 'none';
 });
 
-// window.addEventListener('load', function() {
-//   var loader = document.getElementById('loadingOverlay1');
-//   loader.style.display = 'none';
-// });
+window.addEventListener('load', function() {
+  var loader = document.getElementById('loadingOverlay1');
+  loader.style.display = 'none';
+});
 
 // List of image paths
 const imagePaths = [
@@ -27,16 +27,14 @@ const imagePaths = [
 ];
 
 // Function to change the image source
-function changeImage() {
-  const loadingImage = document.getElementById("loadingImage");
+function changeLoadingImage() {
+  const loadingImage = document.getElementById('loadingImage');
   let currentIndex = 0;
 
-  // Set an interval to change the image every 1 second (adjust as needed)
   setInterval(() => {
-      currentIndex = (currentIndex + 1) % imagePaths.length;
-      loadingImage.src = imagePaths[currentIndex];
-  }, 1500); // Change image every 1 second
+    currentIndex = (currentIndex + 1) % imagePaths.length;
+    loadingImage.src = imagePaths[currentIndex];
+  }, 1500); // Change image every 1 second (adjust as needed)
 }
 
-// Call the function when the page loads
-window.onload = changeImage;
+document.addEventListener('DOMContentLoaded', changeLoadingImage);
